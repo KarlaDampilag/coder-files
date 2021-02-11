@@ -19,6 +19,7 @@ const Hero = styled.div`
     margin-bottom: 15vh;
   }
 `
+
 const TextHome = styled.p`
   color: var(--dark-color-light);
   display: block;
@@ -35,6 +36,7 @@ const TextHome = styled.p`
     margin-bottom: 7vh;
   }
 `
+
 const Post = styled.div`
   border-bottom: 1px solid lightgray;
   margin-bottom: 50px;
@@ -47,21 +49,20 @@ const Post = styled.div`
 export default function Home({data}) {
   return (
     <>
-      <SEO title="Blog" />
+      <SEO title="Coder Files" />
       <HeaderLogo />
       <Layout>
         <Hero>
-          <HeadingXL>Lewis Gatsby Starter Blog</HeadingXL>
+          <HeadingXL>Coder Files</HeadingXL>
           <TextHome>
-            This is a custom Gatsby starter template to start a new blog or
-            personal website.
+            A software developer's blog
           </TextHome>
         </Hero>
         {data.allMarkdownRemark.edges.map(({node}) => (
           <Link to={node.fields.slug} key={node.id}>
             <Post>
               <HeadingL>{node.frontmatter.title}</HeadingL>
-              <TextBody>{node.excerpt}</TextBody>
+              {/* <TextBody>{node.excerpt}</TextBody> */}
               <TextDate>{node.frontmatter.date}</TextDate>
             </Post>
           </Link>

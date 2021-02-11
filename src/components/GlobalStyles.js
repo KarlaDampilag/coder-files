@@ -34,7 +34,7 @@ export const GlobalStyles = createGlobalStyle`
     background-color: var(--light-color);
     color: var(--dark-color);
     font-family: 'IBMPlexMono', sans-serif;
-    font-size: 19px;
+    font-size: 20px;
     font-weight: 400;
     height: 100%;
     padding-top: 20vh;
@@ -45,8 +45,12 @@ export const GlobalStyles = createGlobalStyle`
     }
   }
 
+  p {
+    font-family: 'Merriweather', serif;
+  }
+
   div a {
-    text-decoration: none;
+    text-decoration: underline;
     color: inherit;
     -webkit-tap-highlight-color: hsla(0, 0%, 0%, 0);
     -webkit-tap-highlight-color: transparent;
