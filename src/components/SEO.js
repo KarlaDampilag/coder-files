@@ -1,9 +1,9 @@
 import React from "react"
 import Helmet from "react-helmet"
-import {useStaticQuery, graphql} from "gatsby"
-import {GatsbyIcon} from "../assets/icons"
+import { useStaticQuery, graphql } from "gatsby"
+import { GatsbyIcon } from "../assets/icons"
 
-export function SEO({title}) {
+export function SEO({ title }) {
   const data = useStaticQuery(
     graphql`
       query {
@@ -19,7 +19,7 @@ export function SEO({title}) {
 
   return (
     <Helmet
-      htmlAttributes={{lang: `en`}}
+      htmlAttributes={{ lang: `en` }}
       title={title}
       titleTemplate={`%s ― ${data.site.siteMetadata.title}`}
       meta={[
@@ -47,8 +47,12 @@ export function SEO({title}) {
           name: `twitter:card`,
           content: `summary`,
         },
+        {
+          name: `google-site-verification`,
+          content: `qicJyW2cTTpGy-t8-FP9-wmytZ3wpZKIj7Y0ZrhoKos`
+        }
       ]}
-      link={[{rel: "icon", type: "image/png", href: `${GatsbyIcon}`}]}
+      link={[{ rel: "icon", type: "image/png", href: `${GatsbyIcon}` }]}
     />
   )
 }
