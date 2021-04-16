@@ -9,6 +9,8 @@ import {
   TextDate,
 } from "../components"
 
+import { NewsletterForm } from '../components/NewsletterForm';
+
 export default function BlogPost({data}) {
   return (
     <>
@@ -20,6 +22,7 @@ export default function BlogPost({data}) {
         <TextBody
           dangerouslySetInnerHTML={{__html: data.markdownRemark.html}}
         />
+        <NewsletterForm />
       </Layout>
     </>
   )
